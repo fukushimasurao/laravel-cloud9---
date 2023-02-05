@@ -23,6 +23,13 @@ docker composeが入っていないので、入れる。
 
 もしくは、[ここ](https://www.seeds-std.co.jp/blog/creators/2022-12-02-122250/)が参考になる
 
+```bash
+mkdir -p $HOME/.docker/cli-plugins
+curl -L "https://github.com/docker/compose/releases/download/v2.12.2/docker-compose-$(uname -s)-$(uname -m)" -o "$HOME/.docker/cli-plugins/docker-compose"
+chmod +x "$HOME/.docker/cli-plugins/docker-compose"
+docker compose version
+```
+
 入れられたら、
 
 `$ docker compose version`
